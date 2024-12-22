@@ -1,4 +1,4 @@
-name: Patch Mikrotik RouterOS 6.x arm
+name: Patch Mikrotik RouterOS 6.49.13 arm
 on:
   # push:
   #   branches: [ "main" ]
@@ -90,7 +90,7 @@ jobs:
         echo $(uname -a)
         if [ "${{ inputs.version }}" == "" ]; then
           # LATEST_VERSION=$(wget -nv -O - ${{ env.LATEST_VERSION_URL }}${{ matrix.channel }} | cut -d ' ' -f1)
-          LATEST_VERSION=6.48.6
+          LATEST_VERSION=6.49.13
         else
           LATEST_VERSION=${{ inputs.version }}
         fi
